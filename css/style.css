@@ -907,13 +907,20 @@ body.nav-open .mobile-backdrop {
 
 .panel--dark p,
 .panel--dark li {
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .panel--dark .check-list li::before {
   background:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.2 6.4 11 12.5 4.9' fill='none' stroke='%2310263f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/0.75rem no-repeat,
     rgba(255, 255, 255, 0.94);
+}
+
+.panel--dark .tag-list span {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.96);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .panel--accent {
