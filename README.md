@@ -90,20 +90,18 @@ Aktueller Stand:
 
 ## Cloudflare Web Analytics
 
-Die Website ist fuer eine spaetere Einbindung von Cloudflare Web Analytics vorbereitet, ohne dass das Hosting zu Cloudflare umziehen muss.
+Cloudflare Web Analytics ist fuer `ingenieurbuero-kuehl.de` vorbereitet und aktiviert, ohne dass das Hosting zu Cloudflare umziehen musste.
 
-Vorbereitung im Projekt:
-- `js/site-config.js` enthaelt das Feld fuer den Cloudflare-Site-Token
-- `js/cloudflare-analytics.js` laedt den offiziellen Cloudflare-Beacon nur dann, wenn ein Token eingetragen ist
-- alle HTML-Seiten binden diese beiden Dateien bereits ein
+Umsetzung im Projekt:
+- `js/site-config.js` enthaelt den Cloudflare-Site-Token
+- `js/cloudflare-analytics.js` laedt den offiziellen Cloudflare-Beacon
+- alle HTML-Seiten binden diese beiden Dateien ein
 
-So wird die Messung aktiviert:
-1. In Cloudflare Web Analytics `ingenieurbuero-kuehl.de` als Site anlegen.
-2. Den Site-Token aus dem Cloudflare-Dashboard kopieren.
-3. Den Token in `js/site-config.js` bei `cloudflareWebAnalyticsToken` eintragen.
+Wenn spaeter ein anderer Token verwendet werden soll:
+1. In Cloudflare Web Analytics die betreffende Site oeffnen.
+2. Den neuen Site-Token kopieren.
+3. Den Wert in `js/site-config.js` bei `cloudflareWebAnalyticsToken` ersetzen.
 4. Danach auf GitHub pushen oder neu deployen.
-
-Solange das Token leer ist, bleibt Cloudflare Web Analytics deaktiviert.
 
 ## Kontaktformular
 
