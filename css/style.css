@@ -181,6 +181,17 @@ address {
   color: var(--paper);
 }
 
+.section--dark h1,
+.section--dark h2,
+.section--dark h3,
+.section--dark h4 {
+  color: rgba(255, 255, 255, 0.98);
+}
+
+.section--dark .section__intro p {
+  color: rgba(255, 255, 255, 0.86);
+}
+
 .section--compact {
   padding-top: 0;
 }
