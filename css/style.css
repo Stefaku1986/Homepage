@@ -684,20 +684,49 @@ body.nav-open .mobile-backdrop {
 }
 
 .stat-card {
+  display: grid;
+  align-content: start;
+  gap: 0.7rem;
   padding: 1.3rem 1.2rem;
   border-top: 4px solid rgba(214, 122, 52, 0.48);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 248, 251, 0.95));
 }
 
+.stat-card__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-600);
+}
+
+.stat-card__label::before {
+  content: "";
+  width: 1.85rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.58;
+}
+
 .stat-card strong {
   display: block;
-  margin-bottom: 0.35rem;
-  font-size: clamp(1.55rem, 3vw, 2rem);
+  margin-bottom: 0;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
   color: var(--brand-900);
 }
 
 .stat-card span {
   color: var(--ink-700);
+}
+
+.stat-card > span:last-child {
+  font-size: 0.98rem;
+  line-height: 1.5;
 }
 
 .feature-grid,
