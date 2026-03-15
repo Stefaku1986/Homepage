@@ -59,6 +59,8 @@ Wichtige Frontend-Funktionen in `js/main.js`:
 |- css/
 |  \- style.css
 |- js/
+|  |- cloudflare-analytics.js
+|  |- site-config.js
 |  \- main.js
 `- assets/
 ```
@@ -85,6 +87,23 @@ Aktueller Stand:
 - Ordner: `/ (root)`
 - Custom Domain ueber `CNAME`: `ingenieurbuero-kuehl.de`
 - `.nojekyll` ist vorhanden
+
+## Cloudflare Web Analytics
+
+Die Website ist fuer eine spaetere Einbindung von Cloudflare Web Analytics vorbereitet, ohne dass das Hosting zu Cloudflare umziehen muss.
+
+Vorbereitung im Projekt:
+- `js/site-config.js` enthaelt das Feld fuer den Cloudflare-Site-Token
+- `js/cloudflare-analytics.js` laedt den offiziellen Cloudflare-Beacon nur dann, wenn ein Token eingetragen ist
+- alle HTML-Seiten binden diese beiden Dateien bereits ein
+
+So wird die Messung aktiviert:
+1. In Cloudflare Web Analytics `ingenieurbuero-kuehl.de` als Site anlegen.
+2. Den Site-Token aus dem Cloudflare-Dashboard kopieren.
+3. Den Token in `js/site-config.js` bei `cloudflareWebAnalyticsToken` eintragen.
+4. Danach auf GitHub pushen oder neu deployen.
+
+Solange das Token leer ist, bleibt Cloudflare Web Analytics deaktiviert.
 
 ## Kontaktformular
 
