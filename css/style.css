@@ -1494,6 +1494,7 @@ body.nav-open .mobile-backdrop {
 
   .nav-toggle {
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
